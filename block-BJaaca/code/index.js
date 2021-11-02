@@ -8,8 +8,9 @@
 
 //  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
 
-character.characterName = "Arya";
-
+character={
+  characterName : "Arya",
+};
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
 let age = 20;
@@ -40,9 +41,9 @@ character.isFemale=true
 character.greet();
 
 //  - Change the method `greet` to now alert `She is [NAME HERE] and her title is [TITLE HERE]`.
-character.greet =
+character.greet = function(){
   alert(`She is  ${character.characterName} and her title is ${character.title}`)
-  
+}
 // - Check by calling `greet` and see if the message changed or not.
 
 character.greet();
@@ -54,6 +55,10 @@ if(character["character age"] > 18 ){
   console.log(false)
 }
 
+  or
+
+character.isAdult = character.age > 18 ? true : false
+
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
 
 character.changeIsAdult=!true
@@ -63,17 +68,17 @@ character.changeIsAdult=!true
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
 let keyName = 'playedBy';
-keyName["playedBy"]="Maisie Williams"
+ character["keyName"]="Maisie Williams"
 
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
-alert(keyName)
+alert(character[keyName])
 
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
 
-console.log(character[keyName])
+console.log(character[42]);
 // - Add a new key named `totalSeasons` with the value of `1 + 2 + 3 + 2`. Use this expression
 
-character.totalSeasons=1+2+3+2
+character.totalSeasons=1+2+3+2;
 
 // - Access the value of the key `totalSeason` (it should be 8)
-character.totalSeasons
+console.log(character.totalSeasons);
