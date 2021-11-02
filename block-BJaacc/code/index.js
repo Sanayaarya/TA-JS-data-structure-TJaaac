@@ -37,15 +37,16 @@ students.answer=42
 
 // 9. Using `console.log` print the value of key `42` from the `students` object
 
-console.log(students.answer)
+console.log(students[42])
 
 // 10. Check the length of object named `students`.
 
-students.studentName.length
+Object.keys(students).length
 
 // 11. Can you define a key of `let or var` in any object? Reason.
 
-yes
+student["let"]="Any Value";
+
 // 12. Delete the `isAdult` property from the object `students`. Also, print the object before or after deleting the property
 delete students.isAdult
 
