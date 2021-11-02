@@ -61,7 +61,10 @@ character.isAdult = character.age > 18 ? true : false
 
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
 
-character.changeIsAdult=!true
+character.changeIsAdult= function(){
+  //return character.isAdult === true ? false : true ; 
+  character.isAdult = !character.isAdult;
+}
 
 
 
