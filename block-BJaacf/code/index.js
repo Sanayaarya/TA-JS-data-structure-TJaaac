@@ -2,11 +2,11 @@
  let numbers = [1,2,3,4,5]
 // 2. Calculate the sum of array items and print it to the console using console.log()
 
-let num = 0;
+let sum = 0;
 for(let number of numbers){
   num += number
 }
-console.log(num);
+console.log(sum);
 
 // 3. Calculate the average of array items and print it to the console using console.log()
 let arr = [1,2,3,4,5,6,7,8];
@@ -17,6 +17,11 @@ for (let i = 0 ; i < arr.length ; i++){
      total += arr[i];
 }  
 console.log(total/arr.length)
+
+or
+
+console.log(sum/number.length);
+
 // 4. Find the highest number in the array and print it to the console using console.log()
 let arr=[1,2,3,4,5,6,7,8,9,10]
 let highest = 0;
@@ -26,6 +31,16 @@ for(let i=0;i<arr.length;i++){
     }
 }
 console.log(highest);
+
+or
+
+let heighestNumber = arr[0];
+for(let number of arr){
+  if(number>heighestNumber){
+    heighestNumber=number
+}
+}
+console.log(heighestNumber)
 // 5. Find the lowest number in the array and print it to the console using console.log()
 let arr=[11,22,23,2,5,6,7,8,9,10]
 
@@ -37,6 +52,17 @@ for(let i = 0; i < arr.length ; i++){
 }
 }
 console.log(small)
+
+or
+let lowestNumber = arr[0]; 
+for(let number of arr){
+  if(number<lowestNumber){
+    lowestNumber=number
+}
+}
+console.log(lowestNumber)
+
+
 // 6. Find the even numbers in the array and print them to the console using console.log()
 let arr=[1,2,3,4,5,6,7,8,9,10]
 
@@ -61,23 +87,24 @@ for(let i=0;i<arr.length;i++){
     console.log(arr[i])
   }
 }
-
+or
+for (let num of arr ){
+  if(num%5==0){
+    console.log(num ,"divisible by 5")
+  }
+}
 // 9. Log all the element of the array one by one
-console.log(num);
-console.log(total/arr.length);
-console.log(highest);
-console.log(small);
-console.log(i);
-console.log(i);
-console.log(arr[i]);
+for (let num of arr ){
+    console.log(num ,"each value")
+  }
 
 
 // 10. Find all the number in the array that is divisible by 3
 let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]
 
 
-for(let i=0;i<arr.length;i++){
-  if( arr[i] % 3 === 0 ){
-    console.log(arr[i])
+for (let num of arr ){
+  if(num%5==0){
+    console.log(num ,"divisible by 3")
   }
 }
