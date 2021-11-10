@@ -18,18 +18,31 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // output and reason   Ans- true
+reason- when we call user then ans will be arya ,sibling and we creat newUser name and we put value user and compare them and result will we be same.
+- `user === newUser;`// output and reason  Ans- true
+reason- when we call user then ans will be arya ,sibling and we creat newUser name and we put value user and compare them and result will we be same.
+- `user.name === newUser.name;` // output and reason Ans- true 
+reason- when we call user.name then ans will be arya and we creat newUser.name and we put value user.name and compare to newUser and result will be true.
+- `user.name == newUser.name;` // output and reason Ans- true
+reason- when we call user.name then ans will be arya and we creat newUser.name and we put value user.name and compare to newUser and result will be true.
+- `user.sibling == newUser.sibling;` // output and reason Ans- true
+reason- when  we call user.sibling then ans will be robb, ryan, and john and again we convert user.sibilng to newUser.sibling and compare to each other and result will be true.
+- `user.sibling === newUser.sibling;` // output and reason Ans- true
+reason- when  we call user.sibling then ans will be robb, ryan, and john and again we convert user.sibilng to newUser.sibling and compare to each other and result will be true.
+- `user.sibling == allBrothers;`  // output and reason Ans- false
+when we call user.sibling then ans will be robb, ryan,and john and we comparing to user.sibling and compare to allBrothers result will we false because allBrothers are totally different box.
+- `user.sibling === allBrothers;` // output and reason Ans- false
+when we call user.sibling then ans will be robb, ryan,and john and we comparing to user.sibling and compare to allBrothers result will we false because allBrothers are totally different box.
+- `brothersCopy === allBrothers;` // output and reason Ans- false 
+when we call user.sibling then ans will be robb, ryan,and john and we comparing to user.sibling and compare to allBrothers result will we false because allBrothers are totally different box.
+- `brothersCopy == allBrothers;` // output and reason Ans-false
+when we call user.sibling then ans will be robb, ryan,and john and we comparing to user.sibling and compare to allBrothers result will we false because allBrothers are totally different box.
+- `brothersCopy == user.sibling;` // output and reason  Ans- true
+reason- when  we call brothersCopy then ans will be robb, ryan, and john and again we convert brothersCopy to User.sibling and compare to each other and result will be true.
+- `brothersCopy === user.sibling;` // output and reason Ans- true
+reason- when  we call brothersCopy then ans will be robb, ryan, and john and again we convert brothersCopy to User.sibling and compare to each other and result will be true.
+- `brothersCopy[0] === user.sibling[0];` // output Ans- true 
+- `brothersCopy[1] === user.sibling[1];` // output Ans- true
+- `user.sibling[1] === newUser.sibling[1];` // output Ans- true
+ 
