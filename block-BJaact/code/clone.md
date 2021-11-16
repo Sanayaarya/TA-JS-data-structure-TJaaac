@@ -58,13 +58,13 @@ Ans--false
 console.log(person.address === personTwo.address); // output
 Ans--false
 console.log(person.address == personTwo.address); // output
-Ans--
+Ans--true
 console.log(personTwo.address.city); // output
-Ans--
+Ans--true
 console.log(person.address.city); // output
-Ans--
+Ans--navada
 console.log(person.address.city == personTwo.address.city); // output
-Ans--
+Ans--true
 ```
 
 3. Write the output with reason:
@@ -87,16 +87,27 @@ person.firstName = 'Arya';
 person.city = 'Navada';
 
 console.log(personTwo.firstName); // output
+Ans--john
 console.log(person.firstName); // output
+Ans--arya
 console.log(personTwo.lastName); // output
+Ans--doe
 console.log(person.firstName === personTwo.firstName); // output
+Ans--false
 console.log(person == personTwo); // output
+Ans--false
 console.log(person === personTwo); // output
+Ans--false
 console.log(person.address === personTwo.address); // output
+Ans--false
 console.log(person.address == personTwo.address); // output
+Ans--false
 console.log(personTwo.address.city); // output
+Ans--San Jose
 console.log(person.address.city); // output
+Ans--navada
 console.log(person.address.city == personTwo.address.city); // output
+Ans--false
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -121,17 +132,10 @@ let blogs = [
 ];
 
 // Your code goes here
-let clBlog = [];
-for ( b of blogs ){
-  clBlog.push({...b}) 
-}
-
-or
-
-let cloneBlog = []
-for(let i = 0 ; i < blogs.length; i++){
-  cloneBlog.push({...blogs[i]}) 
-}
+let clonedBlogs = [{...blogs[0]}
+{...blogs[1]}
+{...blogs[2]}
+];
 
 
 
@@ -163,6 +167,17 @@ var questions = [
 
 let questionClone = [...questions,...questions.prompt,...questions.responsive];
 
+or
+let  questionClone = [
+   {...questions[0],responses:[
+    ...questions[0].responses
+   ]}
+   {...questions[1],responses:[
+    ...questions[1].responses
+   ]}
+  ]
+
+
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -192,6 +207,17 @@ var allBlogs = {
 // Your code goes here
 
 let allBlogsClone = {...allBlogs, ...allBlogs.comments};
+
+or
+let allBlogsClone = {
+  ...allBlogs,
+  author: {
+    ...allBlogs.author
+  },
+  comments:[
+    ...allBlogs.comments
+  ]
+}
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -228,6 +254,11 @@ let person = [
 
 let clonePerson = [...person , person.output]
 ]
+
+or
+let clonePerson =
+JSON.parse(JSON.stringify(person))
+
 
 ```
 
